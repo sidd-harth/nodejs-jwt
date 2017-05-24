@@ -1,0 +1,14 @@
+{
+  "name": "simple_jwt",
+  "version": "1.0.0",
+  "description": "A smple JWT Generator and Verifier",
+  "main": "jwt.js",
+  "scripts": {
+    "test": "node jwt.js"
+  },
+   "dependencies": {
+    "jsonwebtoken": ""
+  },
+  "author": "Siddharth Barahalikar",
+  "license": "ISC"
+}
