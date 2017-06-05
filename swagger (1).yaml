@@ -1,0 +1,78 @@
+swagger: '2.0'
+info:
+  version: "0.0.1"
+  title: Testing Swagger Specification
+  description: Any description can be given here regarding API
+  termsOfService: terms
+  contact:
+    name: Siddharth
+    email: asd@gmail.com
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+host: apibaas-trial.apigee.net
+basePath: /siddharth1/sandbox
+schemes: 
+  - http
+  - https
+produces: [application/json]
+paths: 
+  /roles:
+    get:
+      summary: details of employees
+      description: get all details of employees
+      responses:
+        200:
+          description: Success
+        500:
+          description: Server not found - Try using HTTP(S) Schema
+  /roles/{name}:
+    get:
+      summary: user info
+      description: get specific user info
+      parameters: 
+       - name: name
+         in: path
+         description: enter the name to search
+         required: true
+         type: string
+      responses:
+        200:
+          description: OK
+      tags: 
+        - roles    
+  /employees:
+    post:
+      summary: Adding employee
+      description: Lets add an employee data to baas
+      consumes: [application/json]
+      produces: [application/json, application/xml]
+      responses:
+        201:
+          description: Post Successful
+      tags:
+        - employee
+      parameters:
+        - in: body
+          name: body
+          description: "employee to be added"
+          required: true
+          schema:
+            $ref: "#/definitions/Employee"      
+definitions:
+  Employee:
+    type: object
+    properties:
+      name: 
+        type: string
+        description: enter a unique name...
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
